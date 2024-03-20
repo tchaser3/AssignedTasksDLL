@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{83B613BC-5CB4-4424-965E-0A0BF4A610DA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AssignedTasksDLL</RootNamespace>
+    <AssemblyName>AssignedTasksDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NewEventLogDLL">
+      <HintPath>..\..\Blue Jay Class Library\NewEventLogDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssignedEmployeeTasksDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AssignedEmployeeTasksDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AssignedTaskClass.cs" />
+    <Compile Include="AssignedTasksDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AssignedTasksDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AssignedTasksUpdateDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AssignedTasksUpdateDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAllAssignedEmployeeTasksByEmployeeIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAllAssignedEmployeeTasksByEmployeeIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAssignedEmployeeTaskByEmployeeIDTaskIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAssignedEmployeeTaskByEmployeeIDTaskIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAssignedEmployeeTaskByTaskIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAssignedEmployeeTaskByTaskIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAssignedTasksByAssignedEmployeeIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAssignedTasksByAssignedEmployeeIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAssignedTasksByDateMatchDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAssignedTasksByDateMatchDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAssignedTasksByDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAssignedTasksByDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAssignedTasksByOriginatingEmployeeIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAssignedTasksByOriginatingEmployeeIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAssignedTasksByTaskIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAssignedTasksByTaskIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAssignedTaskUpdateByTaskIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAssignedTaskUpdateByTaskIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAssignedTaskUpdateByTransactionIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAssignedTaskUpdateByTransactionIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindOpenAssignedTasksByEmployeeIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindOpenAssignedTasksByEmployeeIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindOpenAssignedTasksDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindOpenAssignedTasksDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindOpenEmployeeAssignedTasksByTaskIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindOpenEmployeeAssignedTasksByTaskIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertAssignedEmployeeTasksEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertAssignedEmployeeTasksEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertAssignedTaskEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertAssignedTaskEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertAssignedTaskUpdateEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertAssignedTaskUpdateEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateAssignedEmployeeTasksEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateAssignedEmployeeTasksEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateAssignedTaskEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateAssignedTaskEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateAssignedTasksEmployeeIDEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateAssignedTasksEmployeeIDEntry.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="AssignedEmployeeTasksDataSet.xsc">
+      <DependentUpon>AssignedEmployeeTasksDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AssignedEmployeeTasksDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AssignedEmployeeTasksDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AssignedEmployeeTasksDataSet.xss">
+      <DependentUpon>AssignedEmployeeTasksDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AssignedTasksDataSet.xsc">
+      <DependentUpon>AssignedTasksDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AssignedTasksDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AssignedTasksDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AssignedTasksDataSet.xss">
+      <DependentUpon>AssignedTasksDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AssignedTasksUpdateDataSet.xsc">
+      <DependentUpon>AssignedTasksUpdateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AssignedTasksUpdateDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AssignedTasksUpdateDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AssignedTasksUpdateDataSet.xss">
+      <DependentUpon>AssignedTasksUpdateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAllAssignedEmployeeTasksByEmployeeIDDataSet.xsc">
+      <DependentUpon>FindAllAssignedEmployeeTasksByEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAllAssignedEmployeeTasksByEmployeeIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAllAssignedEmployeeTasksByEmployeeIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAllAssignedEmployeeTasksByEmployeeIDDataSet.xss">
+      <DependentUpon>FindAllAssignedEmployeeTasksByEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssignedEmployeeTaskByEmployeeIDTaskIDDataSet.xsc">
+      <DependentUpon>FindAssignedEmployeeTaskByEmployeeIDTaskIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssignedEmployeeTaskByEmployeeIDTaskIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAssignedEmployeeTaskByEmployeeIDTaskIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAssignedEmployeeTaskByEmployeeIDTaskIDDataSet.xss">
+      <DependentUpon>FindAssignedEmployeeTaskByEmployeeIDTaskIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssignedEmployeeTaskByTaskIDDataSet.xsc">
+      <DependentUpon>FindAssignedEmployeeTaskByTaskIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssignedEmployeeTaskByTaskIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAssignedEmployeeTaskByTaskIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAssignedEmployeeTaskByTaskIDDataSet.xss">
+      <DependentUpon>FindAssignedEmployeeTaskByTaskIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssignedTasksByAssignedEmployeeIDDataSet.xsc">
+      <DependentUpon>FindAssignedTasksByAssignedEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssignedTasksByAssignedEmployeeIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAssignedTasksByAssignedEmployeeIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAssignedTasksByAssignedEmployeeIDDataSet.xss">
+      <DependentUpon>FindAssignedTasksByAssignedEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssignedTasksByDateMatchDataSet1.xsc">
+      <DependentUpon>FindAssignedTasksByDateMatchDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssignedTasksByDateMatchDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAssignedTasksByDateMatchDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAssignedTasksByDateMatchDataSet1.xss">
+      <DependentUpon>FindAssignedTasksByDateMatchDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssignedTasksByDateRangeDataSet.xsc">
+      <DependentUpon>FindAssignedTasksByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssignedTasksByDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAssignedTasksByDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAssignedTasksByDateRangeDataSet.xss">
+      <DependentUpon>FindAssignedTasksByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssignedTasksByOriginatingEmployeeIDDataSet.xsc">
+      <DependentUpon>FindAssignedTasksByOriginatingEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssignedTasksByOriginatingEmployeeIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAssignedTasksByOriginatingEmployeeIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAssignedTasksByOriginatingEmployeeIDDataSet.xss">
+      <DependentUpon>FindAssignedTasksByOriginatingEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssignedTasksByTaskIDDataSet.xsc">
+      <DependentUpon>FindAssignedTasksByTaskIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssignedTasksByTaskIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAssignedTasksByTaskIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAssignedTasksByTaskIDDataSet.xss">
+      <DependentUpon>FindAssignedTasksByTaskIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssignedTaskUpdateByTaskIDDataSet.xsc">
+      <DependentUpon>FindAssignedTaskUpdateByTaskIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssignedTaskUpdateByTaskIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAssignedTaskUpdateByTaskIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAssignedTaskUpdateByTaskIDDataSet.xss">
+      <DependentUpon>FindAssignedTaskUpdateByTaskIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssignedTaskUpdateByTransactionIDDataSet.xsc">
+      <DependentUpon>FindAssignedTaskUpdateByTransactionIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssignedTaskUpdateByTransactionIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAssignedTaskUpdateByTransactionIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAssignedTaskUpdateByTransactionIDDataSet.xss">
+      <DependentUpon>FindAssignedTaskUpdateByTransactionIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenAssignedTasksByEmployeeIDDataSet.xsc">
+      <DependentUpon>FindOpenAssignedTasksByEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenAssignedTasksByEmployeeIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindOpenAssignedTasksByEmployeeIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindOpenAssignedTasksByEmployeeIDDataSet.xss">
+      <DependentUpon>FindOpenAssignedTasksByEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenAssignedTasksDataSet.xsc">
+      <DependentUpon>FindOpenAssignedTasksDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenAssignedTasksDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindOpenAssignedTasksDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindOpenAssignedTasksDataSet.xss">
+      <DependentUpon>FindOpenAssignedTasksDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenEmployeeAssignedTasksByTaskIDDataSet.xsc">
+      <DependentUpon>FindOpenEmployeeAssignedTasksByTaskIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenEmployeeAssignedTasksByTaskIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindOpenEmployeeAssignedTasksByTaskIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindOpenEmployeeAssignedTasksByTaskIDDataSet.xss">
+      <DependentUpon>FindOpenEmployeeAssignedTasksByTaskIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InsertAssignedEmployeeTasksEntry.xsc">
+      <DependentUpon>InsertAssignedEmployeeTasksEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertAssignedEmployeeTasksEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertAssignedEmployeeTasksEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertAssignedEmployeeTasksEntry.xss">
+      <DependentUpon>InsertAssignedEmployeeTasksEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertAssignedTaskEntry.xsc">
+      <DependentUpon>InsertAssignedTaskEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertAssignedTaskEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertAssignedTaskEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertAssignedTaskEntry.xss">
+      <DependentUpon>InsertAssignedTaskEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertAssignedTaskUpdateEntry.xsc">
+      <DependentUpon>InsertAssignedTaskUpdateEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertAssignedTaskUpdateEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertAssignedTaskUpdateEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertAssignedTaskUpdateEntry.xss">
+      <DependentUpon>InsertAssignedTaskUpdateEntry.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="UpdateAssignedEmployeeTasksEntry.xsc">
+      <DependentUpon>UpdateAssignedEmployeeTasksEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateAssignedEmployeeTasksEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateAssignedEmployeeTasksEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateAssignedEmployeeTasksEntry.xss">
+      <DependentUpon>UpdateAssignedEmployeeTasksEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateAssignedTaskEntry.xsc">
+      <DependentUpon>UpdateAssignedTaskEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateAssignedTaskEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateAssignedTaskEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateAssignedTaskEntry.xss">
+      <DependentUpon>UpdateAssignedTaskEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateAssignedTasksEmployeeIDEntry.xsc">
+      <DependentUpon>UpdateAssignedTasksEmployeeIDEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateAssignedTasksEmployeeIDEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateAssignedTasksEmployeeIDEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateAssignedTasksEmployeeIDEntry.xss">
+      <DependentUpon>UpdateAssignedTasksEmployeeIDEntry.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
